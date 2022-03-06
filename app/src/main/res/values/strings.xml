@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PruebaPractica</string>
+    <string name="lblTitle">Solucionador de ecuaciones 2° grado</string>
+    <string name="lblSubTitle">Ingrese los siguientes datos</string>
+    <string name="lblA">a:</string>
+    <string name="lblB">b:</string>
+    <string name="lblC">c:</string>
+    <string name="btnSolve">Resolver</string>
+    <string name="imgViewDescription">Imagen ecuacion cuadratica</string>
+</resources>
