@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="sv.com.edu.udb.dsm.activities.ComisionVentas"
-    android:background="#202732">
+    android:background="#202732"
+    tools:context="sv.com.edu.udb.dsm.activities.ComisionVentas">
 
     <TextView
         android:id="@+id/textView2"
@@ -114,7 +114,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="184dp"
         android:layout_marginEnd="32dp"
         android:background="#009688"
         android:backgroundTint="#009688"
@@ -130,4 +130,18 @@
         app:layout_constraintTop_toBottomOf="@+id/txtVenta"
         app:rippleColor="#009688"
         app:strokeColor="#009688" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="123dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="123dp"
+        android:onClick="processImage"
+        android:text="AgregarImagen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtVenta" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

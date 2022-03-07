@@ -3,19 +3,23 @@ package sv.com.edu.udb.dsm.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.widget.ImageView;
 
 import sv.com.udb.dsm.R;
 
 public class ComisionVentas extends AppCompatActivity {
 
+    public static final String EMPTY = "";
     private EditText txtNombre;
     private EditText txtCodigo;
     private EditText txtMes;
     private EditText txtVentas;
+    private String uriImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,25 @@ public class ComisionVentas extends AppCompatActivity {
         txtVentas = findViewById(R.id.txtVenta);
     }
 
+    public void processImage(View view){
+        Intent i = new Intent();
+        i.setType("image/*");
+        i.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(i, "Select Picture"), 200);
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+            if (requestCode == 200) {
+                Uri selectedImageUri = data.getData();
+                if (null != selectedImageUri) {
+                    uriImage = selectedImageUri.toString();
+                }
+            }
+        }
+    }
 
     public void calcular(View view) {
         String nombre = txtNombre.getText().toString();
@@ -34,16 +57,19 @@ public class ComisionVentas extends AppCompatActivity {
         String mes = txtMes.getText().toString();
         String ventas = txtVentas.getText().toString();
 
-        String comision = "";
-        String totalComi = "";
+        String comision = EMPTY;
+        String totalComi = EMPTY;
 
-        double ven = Double.parseDouble(ventas);
-        double total = 0;
-
-        if ( "".equals(nombre) || "".equals(codigo) || "".equals(mes) || "".equals(ventas) || ven < 0){
+        if ( EMPTY.equals(nombre) || EMPTY.equals(codigo) || EMPTY.equals(mes) || EMPTY.equals(ventas) || EMPTY.equals(ventas)){
             Toast.makeText(this,"El campo nombre, codigo, mes y ventas no deben estar vacios y el campo ventas debe ser mayor a 0", Toast.LENGTH_LONG).show();
             return;
         }
+        double ven = Double.parseDouble(ventas);
+        if(ven < 0){
+            Toast.makeText(this,"Campo ventas debe ser mayor a 0", Toast.LENGTH_LONG).show();
+            return;
+        }
+        double total = 0;
 
         if (ven < 500){
             comision = "Sin comision";
@@ -83,6 +109,7 @@ public class ComisionVentas extends AppCompatActivity {
         i.putExtra("txtVentas", ventas);
         i.putExtra("Comision", comision);
         i.putExtra("totComision", totalComi);
+        i.putExtra("image",uriImage);
         startActivity(i);
     }
 
