@@ -14,22 +14,22 @@
             android:exported="false" />
         <activity
             android:name="sv.com.edu.udb.dsm.activities.EcuacionActivity"
+            android:exported="false"/>
+        <activity
+            android:name="sv.com.edu.udb.dsm.activities.ComisionVentas"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name="sv.com.edu.udb.dsm.activities.ComisionVentas"
-            android:exported="false"/>
+
         <activity
             android:name="sv.com.edu.udb.dsm.activities.ResultActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name="sv.com.edu.udb.dsm.activities.LoginActivity"
-            android:exported="true">
-
+            android:exported="false">
         </activity>
     </application>
 

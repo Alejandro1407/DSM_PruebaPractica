@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import sv.com.udb.dsm.R;
 
@@ -38,6 +39,11 @@ public class ComisionVentas extends AppCompatActivity {
 
         double ven = Double.parseDouble(ventas);
         double total = 0;
+
+        if ( "".equals(nombre) || "".equals(codigo) || "".equals(mes) || "".equals(ventas) || ven < 0){
+            Toast.makeText(this,"El campo nombre, codigo, mes y ventas no deben estar vacios y el campo ventas debe ser mayor a 0", Toast.LENGTH_LONG).show();
+            return;
+        }
 
         if (ven < 500){
             comision = "Sin comision";

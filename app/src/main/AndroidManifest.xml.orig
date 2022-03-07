@@ -10,34 +10,43 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PruebaPractica">
         <activity
-            android:name="sv.com.edu.udb.dsm.activities.ResultActivity"
-            android:exported="false" />
-        <activity
-            android:name="sv.com.edu.udb.dsm.activities.ComisionVentas"
             android:name="sv.com.edu.udb.dsm.activities.HomeActivity"
             android:exported="false" />
         <activity
             android:name="sv.com.edu.udb.dsm.activities.EcuacionActivity"
+<<<<<<< Updated upstream
+=======
+            android:exported="false"/>
+        <activity
+            android:name="sv.com.edu.udb.dsm.activities.ComisionVentas"
+>>>>>>> Stashed changes
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+<<<<<<< Updated upstream
+        <activity
+            android:name="sv.com.edu.udb.dsm.activities.ComisionVentas"
+            android:exported="false"/>
+        <activity
+            android:name="sv.com.edu.udb.dsm.activities.ResultActivity"
             android:exported="false"/>
         <activity
             android:name="sv.com.edu.udb.dsm.activities.LoginActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+=======
+
         <activity
-            android:name="sv.com.edu.udb.dsm.activities.EcuacionActivity"
-            android:exported="true"></activity>
+            android:name="sv.com.edu.udb.dsm.activities.ResultActivity"
+            android:exported="false" />
         <activity
             android:name="sv.com.edu.udb.dsm.activities.LoginActivity"
-            android:exported="false" />
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
+            android:exported="false">
+>>>>>>> Stashed changes
+        </activity>
     </application>
 
 </manifest>
