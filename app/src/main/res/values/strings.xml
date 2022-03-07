@@ -7,4 +7,5 @@
     <string name="lblC">c:</string>
     <string name="btnSolve">Resolver</string>
     <string name="imgViewDescription">Imagen ecuacion cuadratica</string>
+    <string name="zero">0.0</string>
 </resources>
