@@ -15,7 +15,7 @@ public class LoginActivity extends AppCompatActivity {
     public LoginActivity() {
         super();
         txtA = findViewById(R.id.txtA);
-        txtB = findViewById(R.id.txtB)
+        txtB = findViewById(R.id.txtB);
     }
 
     @Override
