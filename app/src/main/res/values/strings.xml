@@ -8,4 +8,8 @@
     <string name="btnSolve">Resolver</string>
     <string name="imgViewDescription">Imagen ecuacion cuadratica</string>
     <string name="zero">0.0</string>
+    <string name="user"></string>
+    <string name="password_hint">********</string>
+    <string name="username_hint">valejo</string>
+    <string name="btnLogin">Iniciar Sesion</string>
 </resources>
