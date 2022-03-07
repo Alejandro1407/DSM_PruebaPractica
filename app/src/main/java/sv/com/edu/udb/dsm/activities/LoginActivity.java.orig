@@ -13,11 +13,23 @@ import sv.com.udb.dsm.R;
 
 public class LoginActivity extends AppCompatActivity {
 
+<<<<<<< HEAD
+    private final EditText txtA;
+
+    private final EditText txtB;
+
+    public LoginActivity() {
+        super();
+        txtA = findViewById(R.id.txtA);
+        txtB = findViewById(R.id.txtB);
+    }
+=======
     public static final String CREDENCIALES = "credenciales";
     public static final String USER = "user";
     public static final String PASS = "pass";
     private EditText user;
     private EditText password;
+>>>>>>> f09f6df58c6a88aa4b5c4e351a04d8fb7d66e0b9
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

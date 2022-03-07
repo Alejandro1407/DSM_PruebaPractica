@@ -8,6 +8,19 @@
     tools:layout_editor_absoluteX="-5dp"
     tools:layout_editor_absoluteY="40dp">
 
+    <TextView
+        android:id="@+id/lblX2"
+        android:layout_width="175dp"
+        android:layout_height="57dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="176dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSolve"
+        app:layout_constraintVertical_bias="0.743" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="348dp"
@@ -50,18 +63,27 @@
         android:id="@+id/txtA"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:contentDescription="Valor A"
         android:ems="10"
-        android:inputType="numberDecimal"
+        android:hint="@string/zero"
+        android:inputType="numberSigned|numberDecimal"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/lblA"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lblA" />
+        app:layout_constraintStart_toEndOf="@+id/lblA"
+        tools:ignore="DuplicateSpeakableTextCheck" />
 
     <EditText
         android:id="@+id/txtC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:contentDescription="Valor C"
         android:ems="10"
-        android:inputType="numberDecimal"
+        android:hint="@string/zero"
+        android:inputType="numberSigned|numberDecimal"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/lblC"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/lblC" />
@@ -115,8 +137,12 @@
         android:id="@+id/txtB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:contentDescription="Valor B"
         android:ems="10"
-        android:inputType="numberDecimal"
+        android:hint="@string/zero"
+        android:inputType="numberSigned|numberDecimal"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/lblB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/lblB" />
@@ -126,11 +152,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="155dp"
-        android:layout_marginTop="421dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="165dp"
+        android:onClick="resolveEcuation"
         android:text="@string/btnSolve"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtC" />
+
+    <TextView
+        android:id="@+id/lblX1"
+        android:layout_width="175dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="173dp"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSolve"
+        app:layout_constraintVertical_bias="0.69" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
