@@ -48,7 +48,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void viewExercise1(){
-        Intent i = new Intent(this, EcuacionActivity.class); //Matthew's activity
+        Intent i = new Intent(this, ComisionVentas.class);
         startActivity(i);
     }
 
